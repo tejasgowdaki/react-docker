@@ -1,0 +1,11 @@
+FROM node:alpine
+
+WORKDIR '/app/react-docker'
+
+COPY ./package*.json ./
+
+RUN npm install --silent
+
+# COPY ./ ./ # we need this if we do not use docker compose to copy files
+
+CMD ["npm", "run", "start"]
