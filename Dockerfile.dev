@@ -6,6 +6,6 @@ COPY ./package*.json ./
 
 RUN npm install --silent
 
-# COPY ./ ./ # we need this if we do not use docker compose to copy files
+COPY ./ ./
 
 CMD ["npm", "run", "start"]
